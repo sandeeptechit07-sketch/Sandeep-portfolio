@@ -55,12 +55,13 @@ const Projects = () => {
       icon: "🚀",
     },
     {
-      title: "Mobile App Landing Page",
+      title: "3D Animated Solar System",
       description:
-        "Modern landing page with 3D transforms, smooth scrolling animations, and responsive design for mobile conversion.",
-      tags: ["React", "Three.js", "Framer Motion", "CSS3"],
-      gradient: "from-green-600 to-cyan-600",
-      icon: "📱",
+        "Interactive 3D solar system visualization with realistic planet animations, orbital mechanics, and smooth camera transitions. Built with Three.js for immersive space exploration.",
+      tags: ["Three.js", "React", "WebGL", "Animation"],
+      gradient: "from-indigo-600 to-blue-600",
+      icon: "🪐",
+      link: "https://3d-animation-projects.vercel.app",
     },
     {
       title: "Multimedia Portfolio",
@@ -180,6 +181,9 @@ const Projects = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    onClick={() =>
+                      project.link && window.open(project.link, "_blank")
+                    }
                     className="mt-6 w-full px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold group-hover:shadow-lg group-hover:shadow-purple-500/50 transition opacity-0 group-hover:opacity-100"
                   >
                     View Project
